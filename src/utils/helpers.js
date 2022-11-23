@@ -104,4 +104,13 @@ export const getWeatherForcaste = async (location) => {
 
     return [MarshalledWeatherData(weatherResponse.data), weatherResponse.data.daily_units];
     
-  };
+};
+  
+export const convertTime = (ISOTime) => {
+  // 2022-11-23T06:20
+
+  const time = ISOTime.split('T')[1];
+  const hour = Number(time.split(':')[0]);
+
+  return hour >= 12 ? `${time} PM` : `${time} AM`;
+}

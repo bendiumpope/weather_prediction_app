@@ -3,7 +3,7 @@ import DropDown from './components/DropDown';
 import Button from './components/Button';
 import TextInput from './components/TextInput';
 import Table from './components/Table';
-import { getWeatherForcaste, LOCATIONPOSITIONS, WEATHERCODE, DISPLAYTITLE } from './utils/helpers';
+import { getWeatherForcaste, LOCATIONPOSITIONS, WEATHERCODE, DISPLAYTITLE, convertTime } from './utils/helpers';
 import classes from './App.module.css';
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -85,8 +85,8 @@ function App() {
             temperature_2m_max: `${weatherData[key].temperature_2m_max} ${ weatherUnites.temperature_2m_max }`,
             temperature_2m_min: `${weatherData[key].temperature_2m_min} ${ weatherUnites.temperature_2m_min }`,
             precipitation_sum: `${weatherData[key].precipitation_sum} ${ weatherUnites.precipitation_sum }`,
-            sunrise: `${weatherData[key].sunrise} ${ weatherUnites.sunrise }`,
-            sunset: `${weatherData[key].sunset} ${ weatherUnites.sunset }`,
+            sunrise: convertTime(weatherData[key].sunrise),
+            sunset: convertTime(weatherData[key].sunset),
             windspeed_10m_max: `${weatherData[key].windspeed_10m_max} ${ weatherUnites.windspeed_10m_max }`,
             winddirection_10m_dominant: `${weatherData[key].winddirection_10m_dominant}${ weatherUnites.winddirection_10m_dominant }`,
           }
