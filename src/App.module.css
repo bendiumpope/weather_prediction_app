@@ -1,0 +1,74 @@
+.app {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.appHeader {
+  width: 80%;
+  height: 8rem;
+}
+
+.dropDownDiv {
+  width: 100%; 
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.button {
+  height: 2.5rem;
+  z-index: 1;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  box-shadow:slategray;
+} 
+
+.inputDiv {
+  width: 80%;
+  height: 3rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.inputDiv > div {
+  height: 100%;
+  width: 50%;
+  text-align: center;
+}
+
+.inputDiv > div > input{
+  height: 80% !important;
+  width: 80% !important;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+.inputDiv > div > label {
+  font-size: 1.2rem;
+}
+
+.outputDiv {
+  margin-top: 3rem;
+}
+
+.resDiv{
+  margin-bottom: 2rem;
+}
+
+.resDiv > h2 {
+  width: 100%;
+  text-align: center;
+}
