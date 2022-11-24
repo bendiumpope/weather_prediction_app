@@ -107,10 +107,10 @@ export const getWeatherForcaste = async (location) => {
 };
   
 export const convertTime = (ISOTime) => {
-  // 2022-11-23T06:20
 
   const time = ISOTime.split('T')[1];
   const hour = Number(time.split(':')[0]);
+  const munite = time.split(':')[1];
 
-  return hour >= 12 ? `${time} PM` : `${time} AM`;
+  return hour === 12 ? `${time} PM`: hour > 12 ? `${hour - 12}:${munite} PM` : `${time} AM`;
 }
